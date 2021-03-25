@@ -3,7 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "irish-reviewer",
+   "id": "frequent-marsh",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -11,7 +11,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "consistent-tuning",
+   "id": "quick-tolerance",
    "metadata": {},
    "outputs": [
     {
@@ -60,7 +60,6 @@
     "PROJECT=\"tokyo-botany-302620\"\n",
     "schema = 'id: NUMERIC, name: STRING, host_id: NUMERIC, host_name: STRING, neighbourhood_group: STRING, neighbourhood: SRTING, latitude: FLOAT,longitude: FLOAT,room_type: STRING,price: INTEGER, minimum_nights: INTEGER, number_of_reviews: INTEGER, last_review: DATE, reviews_per_month: FLOAT, calculated_host_listings_count: INTEGER,availability_365: INTEGER'\n",
     "schema1 = 'neighbourhood: STRING, count:NUMERIC'\n",
-    "TOPIC=' ps-to-bq-airbnbtransaction1'    \n",
     "    \n",
     "def collectNeighbourhood(data):\n",
     "    yield '{},{}'.format(data['neighbourhood'],data['id'])\n",
@@ -81,7 +80,6 @@
     "    lines = p | 'ReadMyFile' >> beam.io.ReadFromText(inputfile)\n",
     "    \n",
     "    (lines\n",
-    "        | 'PubSub' >> beam.io.ReadFromPubSub(topic=TOPIC).with_output_types(bytes)\n",
     "        | 'Parse CSV' >> beam.Regex.replace_all(r'\\\"([^\\\"]*)\\\"',lambda x:x.group(1).replace(',',''))\n",
     "        | 'Split' >> beam.Map(lambda x: x.split(','))\n",
     "        | 'DeleteIncompleteData' >> beam.Filter(discard_incomplete)\n",
@@ -102,7 +100,7 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "geological-addiction",
+   "id": "characteristic-madagascar",
    "metadata": {},
    "outputs": [
     {
@@ -118,7 +116,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "raised-renewal",
+   "id": "deluxe-sandwich",
    "metadata": {},
    "outputs": [],
    "source": []

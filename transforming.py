@@ -2,8 +2,8 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 42,
-   "id": "dutch-filter",
+   "execution_count": 1,
+   "id": "historical-speaking",
    "metadata": {},
    "outputs": [
     {
@@ -14,10 +14,43 @@
      ]
     },
     {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (typeof window.interactive_beam_jquery == 'undefined') {\n",
+       "          var jqueryScript = document.createElement('script');\n",
+       "          jqueryScript.src = 'https://code.jquery.com/jquery-3.4.1.slim.min.js';\n",
+       "          jqueryScript.type = 'text/javascript';\n",
+       "          jqueryScript.onload = function() {\n",
+       "            var datatableScript = document.createElement('script');\n",
+       "            datatableScript.src = 'https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js';\n",
+       "            datatableScript.type = 'text/javascript';\n",
+       "            datatableScript.onload = function() {\n",
+       "              window.interactive_beam_jquery = jQuery.noConflict(true);\n",
+       "              window.interactive_beam_jquery(document).ready(function($){\n",
+       "                \n",
+       "              });\n",
+       "            }\n",
+       "            document.head.appendChild(datatableScript);\n",
+       "          };\n",
+       "          document.head.appendChild(jqueryScript);\n",
+       "        } else {\n",
+       "          window.interactive_beam_jquery(document).ready(function($){\n",
+       "            \n",
+       "          });\n",
+       "        }"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "WARNING:apache_beam.options.pipeline_options:Discarding unparseable args: ['-f', '/root/.local/share/jupyter/runtime/kernel-f274799a-1ae8-4476-9aa3-7a800ca1d8a2.json']\n"
+      "/root/apache-beam-2.28.0/lib/python3.7/site-packages/apache_beam/io/gcp/bigquery.py:1653: BeamDeprecationWarning: options is deprecated since First stable release. References to <pipeline>.options will not be supported\n",
+      "  experiments = p.options.view_as(DebugOptions).experiments or []\n",
+      "WARNING:apache_beam.options.pipeline_options:Discarding unparseable args: ['-f', '/root/.local/share/jupyter/runtime/kernel-15af5235-0529-4a4e-a9c2-dbc14ceb11c3.json']\n"
      ]
     },
     {
@@ -82,8 +115,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 0,
-   "id": "saving-helmet",
+   "execution_count": 4,
+   "id": "numeric-conspiracy",
    "metadata": {},
    "outputs": [],
    "source": []

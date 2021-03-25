@@ -3,15 +3,15 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "frequent-marsh",
+   "id": "industrial-opening",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
-   "id": "quick-tolerance",
+   "execution_count": 1,
+   "id": "endangered-proposal",
    "metadata": {},
    "outputs": [
     {
@@ -22,10 +22,43 @@
      ]
     },
     {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (typeof window.interactive_beam_jquery == 'undefined') {\n",
+       "          var jqueryScript = document.createElement('script');\n",
+       "          jqueryScript.src = 'https://code.jquery.com/jquery-3.4.1.slim.min.js';\n",
+       "          jqueryScript.type = 'text/javascript';\n",
+       "          jqueryScript.onload = function() {\n",
+       "            var datatableScript = document.createElement('script');\n",
+       "            datatableScript.src = 'https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js';\n",
+       "            datatableScript.type = 'text/javascript';\n",
+       "            datatableScript.onload = function() {\n",
+       "              window.interactive_beam_jquery = jQuery.noConflict(true);\n",
+       "              window.interactive_beam_jquery(document).ready(function($){\n",
+       "                \n",
+       "              });\n",
+       "            }\n",
+       "            document.head.appendChild(datatableScript);\n",
+       "          };\n",
+       "          document.head.appendChild(jqueryScript);\n",
+       "        } else {\n",
+       "          window.interactive_beam_jquery(document).ready(function($){\n",
+       "            \n",
+       "          });\n",
+       "        }"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "WARNING:apache_beam.options.pipeline_options:Discarding unparseable args: ['-f', '/root/.local/share/jupyter/runtime/kernel-6dd8930f-c3fd-42dc-86ee-c35db9cbb51c.json']\n"
+      "/root/apache-beam-2.28.0/lib/python3.7/site-packages/apache_beam/io/gcp/bigquery.py:1653: BeamDeprecationWarning: options is deprecated since First stable release. References to <pipeline>.options will not be supported\n",
+      "  experiments = p.options.view_as(DebugOptions).experiments or []\n",
+      "WARNING:apache_beam.options.pipeline_options:Discarding unparseable args: ['-f', '/root/.local/share/jupyter/runtime/kernel-84838be0-5406-43e0-95c1-89145089a1ef.json']\n"
      ]
     },
     {
@@ -100,7 +133,7 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "characteristic-madagascar",
+   "id": "impaired-feeding",
    "metadata": {},
    "outputs": [
     {
@@ -115,8 +148,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 0,
-   "id": "deluxe-sandwich",
+   "execution_count": null,
+   "id": "present-symposium",
    "metadata": {},
    "outputs": [],
    "source": []

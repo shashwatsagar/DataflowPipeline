@@ -3,7 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": 42,
-   "id": "martial-knight",
+   "id": "dutch-filter",
    "metadata": {},
    "outputs": [
     {
@@ -36,18 +36,6 @@
     "from apache_beam.options.pipeline_options import PipelineOptions\n",
     "from apache_beam.options.pipeline_options import SetupOptions\n",
     "import re\n",
-    "\n",
-    "# pip3 install apache-beam[gcp]\n",
-    "\n",
-    "# python Transforming.py --setup_file setup.py\n",
-    "\n",
-    "# python3 main.py --project=playground-s-11-0fff7bed --job_name=dataflow-demo \n",
-    "# --save_main_session --requirements_file=requirements.txt --staging_location=gs://bucket_store123/staging/ \n",
-    "# --temp_location=gs://bucket_store123/temp/ --region=us-central1 --worker_region=us-central1 --runner=DataflowRunner \n",
-    "# --template_location=gs://bucket_store123/templates/dataflow-poc\n",
-    "\n",
-    "# python3 main.py --project=playground-s-11-0fff7bed --job_name=dataflow-demo --staging_location=gs://bucket_store123/staging/ \n",
-    "# --temp_location=gs://bucket_store123/temp/ --region=us-central1 --worker_region=us-central1 --runner=DataflowRunner \n",
     "\n",
     "PROJECT = 'tokyo-botany-302620'\n",
     "schema1 = 'neighbourhood:STRING,total_count:NUMERIC'\n",
@@ -95,7 +83,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "metropolitan-brass",
+   "id": "saving-helmet",
    "metadata": {},
    "outputs": [],
    "source": []

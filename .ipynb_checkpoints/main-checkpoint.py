@@ -3,7 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "aboriginal-calcium",
+   "id": "frequent-marsh",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -11,7 +11,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "tender-criterion",
+   "id": "quick-tolerance",
    "metadata": {},
    "outputs": [
     {
@@ -72,7 +72,6 @@
     "def transform(argv=None):\n",
     "\n",
     "    inputfile = 'gs://airbnbnyc2019/AB_NYC_2019 (1).csv'\n",
-    "    outputfile = 'gs://airbnbnyc2019/output/output.csv'\n",
     "\n",
     "    pipeline_options = PipelineOptions()\n",
     "    pipeline_options.view_as(SetupOptions).save_main_session = True\n",
@@ -101,7 +100,7 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "lucky-divide",
+   "id": "characteristic-madagascar",
    "metadata": {},
    "outputs": [
     {
@@ -116,8 +115,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "original-banks",
+   "execution_count": 0,
+   "id": "deluxe-sandwich",
    "metadata": {},
    "outputs": [],
    "source": []

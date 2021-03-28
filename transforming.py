@@ -52,7 +52,7 @@ def transform(argv=None):
     )
     p.run().wait_until_finish()
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     print('Started Running')
     transform()
     print('Completed Running')

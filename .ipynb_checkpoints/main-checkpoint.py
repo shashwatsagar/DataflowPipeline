@@ -18,14 +18,7 @@ import re
 # pip3 install apache-beam[gcp]
 
 # python main.py --setup_file setup.py
-
-# python3 main.py --project=playground-s-11-0fff7bed --job_name=dataflow-demo 
-# --save_main_session --requirements_file=requirements.txt --staging_location=gs://bucket_store123/staging/ 
-# --temp_location=gs://bucket_store123/temp/ --region=us-central1 --worker_region=us-central1 --runner=DataflowRunner 
-# --template_location=gs://bucket_store123/templates/dataflow-poc
-
-# python3 main.py --project=playground-s-11-0fff7bed --job_name=dataflow-demo --staging_location=gs://bucket_store123/staging/ 
-# --temp_location=gs://bucket_store123/temp/ --region=us-central1 --worker_region=us-central1 --runner=DataflowRunner 
+ 
 
 PROJECT="tokyo-botany-302620"
 schema = 'id: NUMERIC, name: STRING, host_id: NUMERIC, host_name: STRING, neighbourhood_group: STRING, neighbourhood: SRTING, latitude: FLOAT,longitude: FLOAT,room_type: STRING,price: INTEGER, minimum_nights: INTEGER, number_of_reviews: INTEGER, last_review: DATE, reviews_per_month: FLOAT, calculated_host_listings_count: INTEGER,availability_365: INTEGER'
@@ -58,8 +51,8 @@ def transform(argv=None):
         | 'DeleteIncompleteData' >> beam.Filter(discard_incomplete)
         | 'format to dict' >> beam.Map(lambda x: {"id": x[0], "name": x[1], "host_id": x[2], "host_name": x[3], "neighbourhood_group": x[4], "neighbourhood": x[5], "latitude": x[6], "longitude": x[7], "room_type": x[8],"price": x[9], "minimum_nights": x[10], "number_of_reviews":x[11],"last_review":x[12],"reviews_per_month":x[13],"calculated_host_listings_count":x[14], "availability_365":x[15]})
         
-        | 'WriteToBigQuery' >> beam.io.WriteToBigQuery('{0}:nycairbnb.airbnb_nyc'.format(PROJECT),schema=schema,
-                                                       write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND, method="STREAMING_INSERTS")
+        | 'WriteToBigQuery' >> beam.io.WriteToBigQuery('{0}:nycairbnb.airbnb_nyc'.format(PROJECT),schema=schema,   create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
+                                                       write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE, method="STREAMING_INSERTS")
     )
     p.run().wait_until_finish()
 

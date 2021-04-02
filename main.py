@@ -21,8 +21,8 @@ import re
  
 
 PROJECT="tokyo-botany-302620"
-schema = 'id: NUMERIC, name: STRING, host_id: NUMERIC, host_name: STRING, neighbourhood_group: STRING, neighbourhood: SRTING, latitude: FLOAT,longitude: FLOAT,room_type: STRING,price: INTEGER, minimum_nights: INTEGER, number_of_reviews: INTEGER, last_review: DATE, reviews_per_month: FLOAT, calculated_host_listings_count: INTEGER,availability_365: INTEGER'
-schema1 = 'neighbourhood: STRING, count:NUMERIC'
+schema = 'id: INTEGER, name: STRING, host_id: INTEGER, host_name: STRING, neighbourhood_group: STRING, neighbourhood: SRTING, latitude: FLOAT,longitude: FLOAT,room_type: STRING,price: INTEGER, minimum_nights: INTEGER, number_of_reviews: INTEGER, last_review: DATE, reviews_per_month: FLOAT, calculated_host_listings_count: INTEGER,availability_365: INTEGER'
+schema1 = 'neighbourhood: STRING, count:INTEGER'
 TOPIC = 'ps-to-bq-airbnbtransaction1'    
     
 def collectNeighbourhood(data):

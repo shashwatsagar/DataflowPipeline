@@ -38,7 +38,12 @@ def transform(argv=None):
     inputfile = 'gs://airbnbnyc2019/AB_NYC_2019 (1).csv'
     #outputfile = 'gs://airbnbnyc2019/output/output.csv'
     
-    pipeline_options = PipelineOptions()
+    pipeline_options = PipelineOptions(flags=argv,
+    runner='DataflowRunner',
+    project='tokyo-botany-302620',
+    job_name='ps-to-bq-airbnbtransaction1',
+    temp_location='gs://airbnbnyc2019/temp/',
+    region='us-central1')
     #pipeline_options.view_as(SetupOptions).save_main_session = True
     p = beam.Pipeline(options=pipeline_options)
     
